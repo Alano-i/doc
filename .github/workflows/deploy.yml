@@ -79,25 +79,25 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    name: 部署到自有服务
-    env:
-      FTP_SERVER: ${{ secrets.FTP_SERVER }}
-      FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-      FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-      FTP_DIR: ${{ vars.FTP_DIR }}
-    steps:
-      - name: 获取构建产物
-        uses: actions/download-artifact@v3
-        with:
-          name: build-dist
-      - name: 📂 部署到 FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-        if: env.FTP_SERVER && env.FTP_USERNAME && env.FTP_PASSWORD
-        with:
-          server-dir: ${{ env.FTP_DIR }}
-          server: ${{ env.FTP_SERVER }}
-          username: ${{ env.FTP_USERNAME }}
-          password: ${{ env.FTP_PASSWORD }}
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   name: 部署到自有服务
+  #   env:
+  #     FTP_SERVER: ${{ secrets.FTP_SERVER }}
+  #     FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+  #     FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+  #     FTP_DIR: ${{ vars.FTP_DIR }}
+  #   steps:
+  #     - name: 获取构建产物
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: build-dist
+  #     - name: 📂 部署到 FTP
+  #       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+  #       if: env.FTP_SERVER && env.FTP_USERNAME && env.FTP_PASSWORD
+  #       with:
+  #         server-dir: ${{ env.FTP_DIR }}
+  #         server: ${{ env.FTP_SERVER }}
+  #         username: ${{ env.FTP_USERNAME }}
+  #         password: ${{ env.FTP_PASSWORD }}

@@ -38,6 +38,7 @@ module.exports = {
   ],
   themeConfig: {
     siteTitle: '文档库',
+    appearance: 'force-dark', // 强制默认主题为暗黑模式
     lastUpdated: {
       text: '更新时间',
       formatOptions: {

@@ -39,7 +39,6 @@ module.exports = {
   ],
   themeConfig: {
     siteTitle: '文档库',
-    
     lastUpdated: {
       text: '更新时间',
       formatOptions: {

@@ -3,6 +3,7 @@ import pkg from "../../package.json";
 const vitepressVersion = pkg.devDependencies.vitepress.replace('^', '');
 
 module.exports = {
+  appearance: 'force-dark', // 强制默认主题为暗黑模式
   lang: 'zh_CN',
   title: "VitePress",
   description: "Just playing around.",
@@ -38,7 +39,7 @@ module.exports = {
   ],
   themeConfig: {
     siteTitle: '文档库',
-    appearance: 'force-dark', // 强制默认主题为暗黑模式
+    
     lastUpdated: {
       text: '更新时间',
       formatOptions: {
@@ -50,6 +51,7 @@ module.exports = {
     search: {
       provider: "local",
     },
+    darkModeSwitchLabel : '外观',
     returnToTopLabel: '返回顶部',
     sidebarMenuLabel: '所有文章',
     outline: {

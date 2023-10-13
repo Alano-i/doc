@@ -3,7 +3,7 @@
   "name": "文档库",
   "icons": [
     {
-      "src": "/vitepress-action-demo/icon.png",
+      "src": "/doc/icon.png",
       "sizes": "any",
       "type": "image/png"
     }

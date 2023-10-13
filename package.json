@@ -8,12 +8,12 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:build-gh-page": "cross-env BUILD_BASE='/vitepress-action-demo/' vitepress build docs",
+    "docs:build-gh-page": "cross-env BUILD_BASE='/doc/' vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "vitepress": "^1.0.0-rc.20"
+    "vitepress": "^1.0.0-rc.21"
   },
   "volta": {
     "node": "18.17.1"
